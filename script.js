@@ -11,9 +11,9 @@ $(document).ready(function () {
         var createAccusation = $(`<h3 id='${roomCounter}'>Accusation ${roomCounter}</h3>`).appendTo('body');
 
         var random = {
-            lFriend: squad[Math.floor((Math.random() * squad.length) + 0)],
-            lLocations: places[Math.floor((Math.random() * places.length) + 0)],
-            lWeapon: weapons[Math.floor((Math.random() * weapons.length) + 0)]
+            Friend: squad[Math.floor((Math.random() * squad.length) + 0)],
+            Locations: places[Math.floor((Math.random() * places.length) + 0)],
+            Weapon: weapons[Math.floor((Math.random() * weapons.length) + 0)]
         }
 
         createAccusation.click(murder.bind(random))
@@ -21,7 +21,7 @@ $(document).ready(function () {
     }
 
     function murder() {
-        alert(`I accuse ${this.lFriend}, with the ${this.lWeapon} in the ${this.lLocations}`)
+        alert(`I accuse ${this.Friend}, with the ${this.Weapon} in the ${this.Locations}`)
     }
 
 });
